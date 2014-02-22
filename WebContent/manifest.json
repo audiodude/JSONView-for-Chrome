@@ -14,11 +14,14 @@
   },
   "content_scripts": [{
 	  "matches": ["http://*/*", "https://*/*", "ftp://*/*", "file:///*"],
-	  "js": ["content.js"],
+	  "js": ["jquery-1.11.0.min.js", "jquery.csv.js", "content.js"],
 	  "run_at" : "document_end",
 	  "all_frames" : true
   }],
   "web_accessible_resources": [
+    "jquery-1.11.0.min.js",
+    "jquery-1.11.0.min.map",
+    "jquery.csv.js",
     "jsonview.css",
     "jsonview-core.css",
     "content_error.css",
