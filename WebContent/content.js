@@ -118,10 +118,10 @@ function extractData(rawText) {
 
 function processData(data) {
 	var xhr, jsonText;
-	
+
 	function formatToHTML(fnName, offset) {
 		if (!jsonText)
-			return;	
+			return;
 		port.postMessage({
 			jsonToHTML : true,
 			json : jsonText,
@@ -225,6 +225,7 @@ function showCsv(event) {
   // and http://stackoverflow.com/questions/14964035/how-to-export-javascript-array-info-to-csv-on-client-side
   var uri = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
 
+  this.download = "json_as.csv";
   this.href = uri;
 }
 
